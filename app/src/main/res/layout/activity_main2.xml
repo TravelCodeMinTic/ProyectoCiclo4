@@ -1,0 +1,87 @@
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/redondear"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="30dp"
+        app:cardCornerRadius="30dp"
+        android:orientation="vertical"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/imagenTuristica"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:src="@drawable/imagen1"
+                    android:scaleType="centerCrop"/>
+
+                <TextView
+                    android:id="@+id/tituloLugar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="Titulo"
+                    android:textSize="30sp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="25dp"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/puntuacionNum"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="5.0"
+                        android:layout_marginTop="5dp"
+                        android:textSize="12sp"
+                        android:layout_marginLeft="20dp"/>
+
+                    <RatingBar
+                        android:id="@+id/puntuacionLugar"
+                        style="@style/Widget.AppCompat.RatingBar.Small"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginLeft="8dp"
+                        android:isIndicator="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:rating="5"
+                        android:progressTint="#FFC107"/>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/descripcionLugar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:layout_margin="20dp"
+                    android:text="Descripcion la cual voy a poner Descripcion la cual voy a poner Descripcion la cual voy a poner Descripcion la cual voy a poner Descripcion la cual voy a poner Descripcion la cual voy a poner Descripcion la cual voy a poner Descripcion la cual voy a poner Descripcion la cual voy a poner Descripcion la cual voy a poner Descripcion la cual voy a ponerDescripcion la cual voy a poner Descripcion la cual voy a poner"/>
+            </LinearLayout>
+        </ScrollView>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            app:backgroundTint="#F44336"
+            app:srcCompat="@drawable/ic_baseline_location_on_24" />
+
+    </androidx.cardview.widget.CardView>
+</LinearLayout>
