@@ -5,7 +5,6 @@ import android.os.Bundle
 import android.widget.ImageView
 import android.widget.RatingBar
 import android.widget.TextView
-import androidx.cardview.widget.CardView
 import com.bumptech.glide.Glide
 
 class MainActivity2 : AppCompatActivity() {
@@ -32,5 +31,7 @@ class MainActivity2 : AppCompatActivity() {
         descripcionLugar.text = lugar.descripcion
         puntuacionLugar.rating = lugar.puntuacion.toFloat()
         puntacionNum.text = lugar.puntuacion.toString()
+
+
     }
 }

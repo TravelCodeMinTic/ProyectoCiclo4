@@ -17,7 +17,7 @@ class MainActivity : AppCompatActivity() {
         recyclerView.layoutManager = LinearLayoutManager(this)
         val lugares = ArrayList<LugarTuristico>()
 
-        lugares.add(LugarTuristico("Lugar Turistico #1", "Descripcion de mi lugar turistico el cual se va a investigar...", R.drawable.imagen1, 4.0))
+        lugares.add(LugarTuristico("Guatapé, Antioquia", "Uno de los pueblos más coloridos de Colombia, que se refleja en forma de zócalos y calles llenas de vida.", R.drawable.imagen1, 4.0))
         lugares.add(LugarTuristico("Lugar Turistico #2", "Descripcion de mi lugar turistico el cual se va a investigar...", R.drawable.imagen2, 3.5))
         lugares.add(LugarTuristico("Lugar Turistico #3", "Descripcion de mi lugar turistico el cual se va a investigar...", R.drawable.imagen3, 2.0))
         lugares.add(LugarTuristico("Lugar Turistico #4", "Descripcion de mi lugar turistico el cual se va a investigar...", R.drawable.imagen4, 5.0))

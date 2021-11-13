@@ -1,41 +1,45 @@
-<LinearLayout android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/redondear"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="20dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginRight="20dp"
+    android:background="@drawable/redondear">
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_margin="30dp"
-        app:cardCornerRadius="30dp"
         android:orientation="vertical"
-        xmlns:android="http://schemas.android.com/apk/res/android">
+        app:cardCornerRadius="30dp">
 
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
             <LinearLayout
-                android:orientation="vertical"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
 
                 <ImageView
                     android:id="@+id/imagenTuristica"
                     android:layout_width="match_parent"
                     android:layout_height="300dp"
-                    android:src="@drawable/imagen1"
-                    android:scaleType="centerCrop"/>
+                    android:contentDescription="@string/todo"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/imagen1" />
 
                 <TextView
                     android:id="@+id/tituloLugar"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:hint="Titulo"
-                    android:textSize="30sp"
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginTop="25dp"/>
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="25dp"
+                    android:hint="@string/titulo"
+                    android:hintTextColor="#78909C"
+                    android:textSize="30sp" />
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -46,30 +50,90 @@
                         android:id="@+id/puntuacionNum"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="5.0"
+                        android:layout_marginStart="20dp"
                         android:layout_marginTop="5dp"
-                        android:textSize="12sp"
-                        android:layout_marginLeft="20dp"/>
+                        android:text="@string/puntuacion1"
+                        android:textSize="12sp" />
 
                     <RatingBar
                         android:id="@+id/puntuacionLugar"
                         style="@style/Widget.AppCompat.RatingBar.Small"
-                        android:layout_marginTop="5dp"
-                        android:layout_marginLeft="8dp"
-                        android:isIndicator="true"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:rating="5"
-                        android:progressTint="#FFC107"/>
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="5dp"
+                        android:isIndicator="true"
+                        android:progressTint="#FFC107"
+                        android:rating="5" />
                 </LinearLayout>
 
                 <TextView
                     android:id="@+id/descripcionLugar"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textSize="20sp"
-                    android:layout_margin="20dp"
-                    android:text="Descripcion la cual voy a poner Descripcion la cual voy a poner Descripcion la cual voy a poner Descripcion la cual voy a poner Descripcion la cual voy a poner Descripcion la cual voy a poner Descripcion la cual voy a poner Descripcion la cual voy a poner Descripcion la cual voy a poner Descripcion la cual voy a poner Descripcion la cual voy a ponerDescripcion la cual voy a poner Descripcion la cual voy a poner"/>
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="20dp"
+                    android:text="@string/descripcionLugar1"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/ubicacionLugar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="20dp"
+                    android:text="@string/ubicacionLugar"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/ubicacionLugar1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:text="@string/ubicacionLugar1" />
+
+                <TextView
+                    android:id="@+id/temperaturaLugar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="20dp"
+                    android:text="@string/temperaturaLugar"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/temperaturaLugar1"
+                    android:layout_width="330dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:text="@string/temperaturaLugar1"
+                    android:textColor="#757575"
+                    android:textStyle="normal" />
+
+                <TextView
+                    android:id="@+id/sitiosLugar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="20dp"
+                    android:text="@string/sitiosLugar"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/sitiosLugar1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="80dp"
+                    android:layout_marginBottom="20dp"
+                    android:text="@string/sitiosLugar1" />
+
             </LinearLayout>
         </ScrollView>
 
@@ -80,6 +144,7 @@
             android:layout_gravity="bottom|end"
             android:layout_marginEnd="16dp"
             android:layout_marginBottom="16dp"
+            android:contentDescription="@string/ubicacion"
             app:backgroundTint="#F44336"
             app:srcCompat="@drawable/ic_baseline_location_on_24" />
 

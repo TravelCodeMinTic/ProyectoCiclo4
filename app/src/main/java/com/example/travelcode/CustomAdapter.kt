@@ -45,7 +45,6 @@ class CustomAdapter(var lista: ArrayList<LugarTuristico>): RecyclerView.Adapter<
             Glide.with(itemView.context).load(data.imagen).into(imgLugar)
             puntuacion.rating = data.puntuacion.toFloat()
 
-
             //Evento cuando se le da en una tarjeta
             itemView.setOnClickListener{
                 val intent = Intent(itemView.context, MainActivity2::class.java)
