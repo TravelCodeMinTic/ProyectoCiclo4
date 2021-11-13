@@ -2,9 +2,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginLeft="20dp"
-    android:layout_marginTop="10dp"
-    android:layout_marginRight="20dp"
     android:background="@drawable/redondear">
 
     <androidx.cardview.widget.CardView
@@ -38,7 +35,6 @@
                     android:layout_marginStart="20dp"
                     android:layout_marginTop="25dp"
                     android:hint="@string/titulo"
-                    android:hintTextColor="#78909C"
                     android:textSize="30sp" />
 
                 <LinearLayout
