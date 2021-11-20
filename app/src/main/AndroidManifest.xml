@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.travelcode">
 
+    <!-- Permiso para que mi App use Internet -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -16,7 +19,7 @@
         <activity
             android:name=".MainActivity"
             android:exported="true">
-            <intent-filter>
+            <intent-filter> <!-- Para que se inicie la app por esta actividad -->
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
