@@ -18,6 +18,9 @@ class MainActivity2 : AppCompatActivity() {
         val descripcionLugar : TextView = findViewById(R.id.descripcionLugar)
         val puntuacionLugar : RatingBar = findViewById(R.id.puntuacionLugar)
         val puntacionNum : TextView = findViewById(R.id.puntuacionNum)
+        val temperaturaLugar : TextView = findViewById(R.id.temperaturaLugar)
+        val ubicacionLugar: TextView = findViewById(R.id.ubicacionLugar)
+        val sitiosLugar: TextView = findViewById(R.id.sitiosLugar)
 
         //Creacion de un Bundle para obtener la info de mi Activity principal
         val bundle : Bundle? = intent.extras
@@ -31,7 +34,8 @@ class MainActivity2 : AppCompatActivity() {
         descripcionLugar.text = lugar.descripcion
         puntuacionLugar.rating = lugar.puntuacion.toFloat()
         puntacionNum.text = lugar.puntuacion.toString()
-
-
+        temperaturaLugar.text = lugar.temperatura
+        ubicacionLugar.text = lugar.ubicacion
+        sitiosLugar.text = lugar.sitios
     }
 }

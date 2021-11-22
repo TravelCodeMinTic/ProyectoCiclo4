@@ -2,11 +2,11 @@
     <string name="app_name">TravelCode</string>
     <string name="descripcionLugar1">Descripción general</string>
     <string name="ubicacionLugar">Ubicación:</string>
-    <string name="ubicacionLugar1">Departamento de Antioquia (a 2 horas de Medellín)</string>
-    <string name="temperaturaLugar">Temperatura:</string>
-    <string name="temperaturaLugar1">19°C</string>
+    <string name="temperaturaLugar1">Temperatura promedio:</string>
+    <string name="temperaturaLugar">Temperatura </string>
     <string name="sitiosLugar">Sitios recomendados:</string>
     <string name="sitiosLugar1">Parque principal de Guatapé, Piedra del Peñol, Embalse Guatapé-Peñol, Calle del Recuerdo, Plazoleta del Zócalo, Malecón de Guatapé</string>
+    <string name="ubicacionLugar2">Departamento del Valle del Cauca</string>
     <string name="todo">todo</string>
     <string name="titulo">Titulo</string>
     <string name="ubicacion">ubicacion</string>

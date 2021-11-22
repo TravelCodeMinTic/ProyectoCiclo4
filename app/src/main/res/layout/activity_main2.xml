@@ -1,8 +1,10 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/redondear">
+    android:background="@drawable/redondear"
+    tools:context=".MainActivity2">
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
@@ -13,7 +15,7 @@
 
         <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="648dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -41,6 +43,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
+
 
                     <TextView
                         android:id="@+id/puntuacionNum"
@@ -75,7 +78,7 @@
 
                 <TextView
                     android:id="@+id/ubicacionLugar"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
                     android:layout_marginTop="10dp"
@@ -89,60 +92,56 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
                     android:layout_marginRight="20dp"
-                    android:text="@string/ubicacionLugar1" />
+                    android:text="@string/ubicacionLugar" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="20dp"
+                    android:text="@string/temperaturaLugar1"
+                    android:textColor="#757575"
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/temperaturaLugar"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
-                    android:layout_marginTop="10dp"
                     android:layout_marginRight="20dp"
-                    android:text="@string/temperaturaLugar"
-                    android:textStyle="bold" />
+                    android:text="@string/temperaturaLugar" />
 
                 <TextView
-                    android:id="@+id/temperaturaLugar1"
-                    android:layout_width="330dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginRight="20dp"
-                    android:text="@string/temperaturaLugar1"
-                    android:textColor="#757575"
-                    android:textStyle="normal" />
-
-                <TextView
-                    android:id="@+id/sitiosLugar"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="20dp"
                     android:layout_marginTop="10dp"
-                    android:layout_marginRight="20dp"
                     android:text="@string/sitiosLugar"
                     android:textStyle="bold" />
 
                 <TextView
-                    android:id="@+id/sitiosLugar1"
-                    android:layout_width="match_parent"
+                    android:id="@+id/sitiosLugar"
+                    android:layout_width="295dp"
+                    android:layout_height="56dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="@string/sitiosLugar1"/>
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/fab"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginEnd="80dp"
-                    android:layout_marginBottom="20dp"
-                    android:text="@string/sitiosLugar1" />
+                    android:layout_gravity="bottom|end"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:contentDescription="@string/ubicacion"
+                    app:backgroundTint="#F44336"
+                    app:srcCompat="@drawable/ic_baseline_location_on_24" />
 
             </LinearLayout>
         </ScrollView>
-
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/fab"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom|end"
-            android:layout_marginEnd="16dp"
-            android:layout_marginBottom="16dp"
-            android:contentDescription="@string/ubicacion"
-            app:backgroundTint="#F44336"
-            app:srcCompat="@drawable/ic_baseline_location_on_24" />
 
     </androidx.cardview.widget.CardView>
 </LinearLayout>

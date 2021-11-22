@@ -34,10 +34,10 @@ class CustomAdapter(var lista: ArrayList<LugarTuristico>): RecyclerView.Adapter<
     class ViewHolder(itemView:View): RecyclerView.ViewHolder(itemView){
         fun  bindItems(data:LugarTuristico){
             //Inicializamos los componentes
-            var tituloLugar: TextView = itemView.findViewById(R.id.tituloLugar)
-            var descripcionLugar: TextView = itemView.findViewById(R.id.descripcionLugar)
-            var imgLugar: ImageView = itemView.findViewById(R.id.imgLugar)
-            var puntuacion: RatingBar = itemView.findViewById(R.id.puntuacion)
+            val tituloLugar: TextView = itemView.findViewById(R.id.tituloLugar)
+            val descripcionLugar: TextView = itemView.findViewById(R.id.descripcionLugar)
+            val imgLugar: ImageView = itemView.findViewById(R.id.imgLugar)
+            val puntuacion: RatingBar = itemView.findViewById(R.id.puntuacion)
 
             //Pasamos los valores a cada componente de la interfaz
             tituloLugar.text = data.titulo
