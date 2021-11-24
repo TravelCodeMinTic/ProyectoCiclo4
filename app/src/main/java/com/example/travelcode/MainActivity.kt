@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.widget.Button
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
@@ -51,7 +52,7 @@ class MainActivity : AppCompatActivity() {
             5.0,
             "28°C",
             "Departamento de Valle del Cauca, al occidente de Colombia.",
-            "Cerro de Cristo Rey, Zoológico de Cali, Museo de arte moderno La Tertulia, Iglesia la Ermita, la Torre de Cali, Cerro de las Tres Cruces, Boulevard del Río Cali, entre otros."
+            "Cerro de Cristo Rey, Zoológico de Cali, Museo de arte moderno La Tertulia, Iglesia la Ermita, Boulevard del Río Cali, entre otros."
         ))
         lugares.add(LugarTuristico(
             "Cartagena de Indias",
@@ -65,10 +66,14 @@ class MainActivity : AppCompatActivity() {
 
         val adapter = CustomAdapter(lugares)
         recyclerView.adapter = adapter
-    }
 
-     fun intento(view: View): Intent {
-        val intent : Intent = Intent(this, MainActivity2::class.java)
-        return intent
+        /*
+        val btn1 = findViewById<Button>(R.id.btn1)
+
+        btn1.setOnClickListener{
+            val intent = Intent(this, SettingsActivity::class.java)
+            startActivity(intent)
+        }
+         */
     }
 }
