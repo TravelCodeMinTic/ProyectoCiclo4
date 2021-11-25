@@ -2,23 +2,20 @@ package com.example.travelcode
 
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.RatingBar
 import android.widget.TextView
-import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import kotlin.reflect.typeOf
 
 class CustomAdapter(var lista: ArrayList<LugarTuristico>): RecyclerView.Adapter<CustomAdapter.ViewHolder>() {
 
     //Cuando entra a crear la RecyclerView
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val v = LayoutInflater.from(parent.context).inflate(R.layout.content_item, parent, false)
+        val v = LayoutInflater.from(parent.context).inflate(R.layout.card_lugar, parent, false)
         return ViewHolder(v)
     }
 
@@ -47,7 +44,7 @@ class CustomAdapter(var lista: ArrayList<LugarTuristico>): RecyclerView.Adapter<
 
             //Evento cuando se le da en una tarjeta
             itemView.setOnClickListener{
-                val intent = Intent(itemView.context, MainActivity2::class.java)
+                val intent = Intent(itemView.context, DetalleLugar::class.java)
                 val bundle = Bundle()
 
                 bundle.putSerializable("info", data)

@@ -10,16 +10,20 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.TravelCode" >
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+        <activity
+            android:name=".Configuracion"
+            android:exported="false"
+            android:label="@string/title_activity_settings" />
         <activity
             android:name=".SettingsActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity2"
+            android:name=".DetalleLugar"
             android:exported="false"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
-            android:name=".MainActivity"
+            android:name=".Principal"
             android:exported="true" >
             <intent-filter> <!-- Para que se inicie la app por esta actividad -->
                 <action android:name="android.intent.action.MAIN" />

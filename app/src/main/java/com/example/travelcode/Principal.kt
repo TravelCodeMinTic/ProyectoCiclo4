@@ -3,15 +3,14 @@ package com.example.travelcode
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
-import android.widget.Button
+import android.widget.ImageView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
-class MainActivity : AppCompatActivity() {
+class Principal : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.principal)
 
         val recyclerView = findViewById<RecyclerView>(R.id.recyclerView)
 
@@ -67,13 +66,12 @@ class MainActivity : AppCompatActivity() {
         val adapter = CustomAdapter(lugares)
         recyclerView.adapter = adapter
 
-        /*
-        val btn1 = findViewById<Button>(R.id.btn1)
-
-        btn1.setOnClickListener{
-            val intent = Intent(this, SettingsActivity::class.java)
+        //Pasar de mi ActivityMain a mi Activity de configuración
+        val btnconfig:ImageView = findViewById(R.id.configuracion)
+        btnconfig.setOnClickListener{
+            val intent = Intent(this, Configuracion::class.java)
             startActivity(intent)
         }
-         */
+
     }
 }

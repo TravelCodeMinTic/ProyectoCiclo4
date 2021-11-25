@@ -7,10 +7,10 @@ import android.widget.RatingBar
 import android.widget.TextView
 import com.bumptech.glide.Glide
 
-class MainActivity2 : AppCompatActivity() {
+class DetalleLugar : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main2)
+        setContentView(R.layout.detalle_lugar)
 
         //Instanciamos elemento en variable para mi TextView
         val tituloLugar : TextView = findViewById(R.id.tituloLugar)
