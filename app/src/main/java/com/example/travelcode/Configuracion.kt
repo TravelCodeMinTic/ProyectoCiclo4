@@ -1,8 +1,7 @@
 package com.example.travelcode
 
-import android.content.Intent
 import android.os.Bundle
-import android.widget.ImageView
+
 import androidx.appcompat.app.AppCompatActivity
 import androidx.preference.PreferenceFragmentCompat
 
@@ -18,12 +17,6 @@ class Configuracion : AppCompatActivity() {
                     .commit()
         }
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
-
-        val btnVolver : ImageView = findViewById(R.id.volver)
-        btnVolver.setOnClickListener{
-            val intent = Intent(this, Principal::class.java)
-            startActivity(intent)
-        }
     }
 
     class SettingsFragment : PreferenceFragmentCompat() {

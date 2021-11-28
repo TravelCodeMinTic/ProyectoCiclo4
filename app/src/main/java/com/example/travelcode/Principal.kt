@@ -3,7 +3,8 @@ package com.example.travelcode
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.ImageView
+import android.view.Menu
+import android.view.MenuItem
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
@@ -65,13 +66,22 @@ class Principal : AppCompatActivity() {
 
         val adapter = CustomAdapter(lugares)
         recyclerView.adapter = adapter
+    }
 
-        //Pasar de mi ActivityMain a mi Activity de configuración
-        val btnconfig:ImageView = findViewById(R.id.configuracion)
-        btnconfig.setOnClickListener{
+    //Metodo para mostrar y ocultar el menu
+    override fun onCreateOptionsMenu(menu: Menu): Boolean {
+        menuInflater.inflate(R.menu.overflow, menu)
+        return true
+    }
+
+    //Metpdo para asignar las funciones correspondientes a los items del menu
+    override fun onOptionsItemSelected(itemConfig : MenuItem) : Boolean {
+        val id = itemConfig.itemId //Obtenemos el item que se esta seleccionando
+        if (id == R.id.itemConfiguracion){
             val intent = Intent(this, Configuracion::class.java)
             startActivity(intent)
         }
-
+        return super.onOptionsItemSelected(itemConfig)
     }
+
 }

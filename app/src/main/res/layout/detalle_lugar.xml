@@ -12,7 +12,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical">
 
             <ImageView
@@ -63,7 +63,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:layout_marginStart="8dp"
-                        android:layout_toRightOf="@+id/puntuacionNum"
+                        android:layout_toEndOf="@+id/puntuacionNum"
                         android:isIndicator="true"
                         android:progressTint="#FFC107"
                         android:rating="5" />
@@ -72,8 +72,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_centerVertical="true"
-                        android:layout_marginRight="5dp"
-                        android:layout_toLeftOf="@id/temperaturaLugar"
+                        android:contentDescription="@string/icon"
+                        android:layout_toStartOf="@id/temperaturaLugar"
 
                         android:src="@drawable/icono_temperatura" />
 
@@ -81,8 +81,8 @@
                         android:id="@+id/temperaturaLugar"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_alignParentRight="true"
-                        android:text="32 °C"
+                        android:layout_alignParentEnd="true"
+                        android:text="@string/temperaturaLugar"
                         android:textStyle="bold"
                         android:textColor="@color/black"
                         android:textSize="20sp" />
@@ -93,7 +93,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="15dp"
-                    android:text="@string/descripcionLugar1"
+                    android:text="@string/descripcionLugar"
                     android:fontFamily="sans-serif-medium"
                     android:textSize="14sp" />
 

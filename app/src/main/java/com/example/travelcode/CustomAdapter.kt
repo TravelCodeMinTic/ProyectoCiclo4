@@ -11,7 +11,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 
-class CustomAdapter(var lista: ArrayList<LugarTuristico>): RecyclerView.Adapter<CustomAdapter.ViewHolder>() {
+class CustomAdapter(private var lista: ArrayList<LugarTuristico>): RecyclerView.Adapter<CustomAdapter.ViewHolder>() {
 
     //Cuando entra a crear la RecyclerView
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -53,6 +53,5 @@ class CustomAdapter(var lista: ArrayList<LugarTuristico>): RecyclerView.Adapter<
                 itemView.context.startActivity(intent)
             }
         }
-
     }
 }

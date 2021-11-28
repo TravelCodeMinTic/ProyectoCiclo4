@@ -1,9 +1,8 @@
 <resources>
     <string name="app_name">TravelCode</string>
-    <string name="descripcionLugar1">Descripción general</string>
+    <string name="descripcionLugar">Descripción general</string>
     <string name="ubicacionLugar">Ubicación:</string>
-    <string name="temperaturaLugar1">Temperatura promedio:</string>
-    <string name="temperaturaLugar">Temperatura </string>
+    <string name="temperaturaLugar">32° C</string>
     <string name="sitiosLugar">Sitios recomendados:</string>
     <string name="sitiosLugar1">Parque principal de Guatapé, Piedra del Peñol, Embalse Guatapé-Peñol, Calle del Recuerdo, Plazoleta del Zócalo, Malecón de Guatapé</string>
     <string name="ubicacionLugar2">Departamento del Valle del Cauca</string>
@@ -12,28 +11,12 @@
     <string name="ubicacion">ubicacion</string>
     <string name="puntuacion1">5.0</string>
     <string name="lugar_turistico">Lugar Turistico</string>
-    <string name="descripcion_de_mi_lugar_turistico_el_cual_se_va_a_investigar">Descripcion de mi lugar turistico el cual se va a investigar...</string>
     <string name="todos">todos</string>
     <string name="configuracion">Configuración App</string>
     <string name="notificaciones">Autorizar notificaciones</string>
     <string name="sonido">Activar sonido de notificaciones</string>
     <string name="btnVolver">Volver</string>
     <string name="btn1">configuración app</string>
-    <string name="title_activity_settings">Settings</string>
-
-    <!-- Preference Titles -->
-    <string name="messages_header">Messages</string>
-    <string name="sync_header">Sync</string>
-
-    <!-- Messages Preferences -->
-    <string name="signature_title">Your signature</string>
-    <string name="reply_title">Default reply action</string>
-
-    <!-- Sync Preferences -->
-    <string name="sync_title">Sync email periodically</string>
-    <string name="attachment_title">Download incoming attachments</string>
-    <string name="attachment_summary_on">Automatically download attachments for incoming emails
-    </string>
-    <string name="attachment_summary_off">Only download attachments when manually requested</string>
-
+    <string name="titulo_configuracion">Configuración</string>
+    <string name="icon">Incono</string>
 </resources>

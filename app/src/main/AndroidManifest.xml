@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+<manifest
+    xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.travelcode" >
+
     <!-- Permiso para que mi App use Internet -->
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -10,27 +12,31 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+        android:theme="@style/Theme.TravelCode" >
+
         <activity
             android:name=".Configuracion"
             android:exported="false"
-            android:label="@string/title_activity_settings" />
-        <activity
-            android:name=".SettingsActivity"
-            android:exported="false" />
+            android:label="@string/titulo_configuracion">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Principal"/>
+        </activity>
+
         <activity
             android:name=".DetalleLugar"
             android:exported="false"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+            android:theme="@style/Theme.MaterialComponents.Light.NoActionBar" />
+
         <activity
             android:name=".Principal"
             android:exported="true" >
-            <intent-filter> <!-- Para que se inicie la app por esta actividad -->
+            <intent-filter>
+                <!-- Para que se inicie la app por esta actividad -->
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-    </application>
 
+    </application>
 </manifest>

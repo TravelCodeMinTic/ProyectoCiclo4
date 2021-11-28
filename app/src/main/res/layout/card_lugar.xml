@@ -35,14 +35,14 @@
 
         <TextView
             android:id="@+id/tituloLugar"
-            android:layout_toRightOf="@+id/cardImg"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="15dp"
             android:layout_marginEnd="15dp"
+            android:layout_toEndOf="@+id/cardImg"
             android:text="@string/lugar_turistico"
-            android:textSize="20sp"
             android:textColor="@color/black"
+            android:textSize="20sp"
             android:textStyle="bold" />
 
         <TextView
@@ -51,25 +51,24 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/tituloLugar"
             android:layout_marginStart="15dp"
-            android:layout_marginEnd="15dp"
             android:layout_marginTop="5dp"
-            android:layout_toRightOf="@+id/cardImg"
-            android:text="@string/descripcion_de_mi_lugar_turistico_el_cual_se_va_a_investigar"
-            android:textSize="15sp"
-            android:textColor="@color/black"/>
+            android:layout_marginEnd="15dp"
+            android:layout_toEndOf="@+id/cardImg"
+            android:text="@string/descripcionLugar"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
 
         <RatingBar
             android:id="@+id/puntuacion"
             style="@style/Widget.AppCompat.RatingBar.Small"
-            android:numStars="5"
-            android:isIndicator="true"
-            android:rating="3"
-            android:progressTint="#FFC107"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:layout_alignParentRight="true"
             android:layout_alignParentEnd="true"
-            android:layout_below="@+id/descripcionLugar"/>
+            android:layout_marginTop="10dp"
+            android:isIndicator="true"
+            android:numStars="5"
+            android:progressTint="#FFC107"
+            android:rating="3"
+            android:layout_below="@id/descripcionLugar"/>
     </RelativeLayout>
 </androidx.cardview.widget.CardView>

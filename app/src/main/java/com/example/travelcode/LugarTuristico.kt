@@ -10,5 +10,4 @@ class LugarTuristico(
     var temperatura: String,
     var ubicacion: String,
     var sitios: String
-    ):Serializable  {
-}
+    ):Serializable
