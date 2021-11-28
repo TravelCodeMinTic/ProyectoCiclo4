@@ -19,7 +19,7 @@
                 android:id="@+id/imagenTuristica"
                 android:layout_width="match_parent"
                 android:layout_height="350dp"
-                android:contentDescription="@string/todo"
+                android:contentDescription="@string/icon"
                 android:scaleType="centerCrop"
                 android:src="@drawable/imagen1"/>
 
@@ -34,7 +34,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="sans-serif-medium"
-                    android:text="@string/app_name"
+                    android:text="@string/titulo"
                     android:textColor="@color/black"
                     android:textSize="30sp"
                     android:textStyle="bold" />
@@ -50,7 +50,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:fontFamily="sans-serif-medium"
-                        android:text="@string/puntuacion1"
+                        android:text="@string/puntuacion"
                         android:textColor="@color/black"
                         android:textSize="12sp"
                         android:textStyle="bold" />
@@ -58,7 +58,6 @@
                     <RatingBar
                         android:id="@+id/puntuacionLugar"
                         style="@style/Widget.AppCompat.RatingBar.Small"
-                        android:scrollbarSize="10dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
@@ -66,14 +65,15 @@
                         android:layout_toEndOf="@+id/puntuacionNum"
                         android:isIndicator="true"
                         android:progressTint="#FFC107"
-                        android:rating="5" />
+                        android:rating="5"
+                        android:scrollbarSize="10dp" />
 
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_centerVertical="true"
-                        android:contentDescription="@string/icon"
                         android:layout_toStartOf="@id/temperaturaLugar"
+                        android:contentDescription="@string/icon"
 
                         android:src="@drawable/icono_temperatura" />
 
@@ -82,10 +82,10 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentEnd="true"
-                        android:text="@string/temperaturaLugar"
-                        android:textStyle="bold"
+                        android:text="@string/temperatura"
                         android:textColor="@color/black"
-                        android:textSize="20sp" />
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
                 </RelativeLayout>
 
                 <TextView
@@ -93,7 +93,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="15dp"
-                    android:text="@string/descripcionLugar"
+                    android:text="@string/descripcion"
                     android:fontFamily="sans-serif-medium"
                     android:textSize="14sp" />
 
@@ -101,20 +101,20 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
-                    android:text="@string/ubicacionLugar"
+                    android:text="@string/titulo_ubicacion"
                     android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/ubicacionLugar"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/ubicacionLugar" />
+                    android:text="@string/ubicacion" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
-                    android:text="@string/sitiosLugar"
+                    android:text="@string/titulo_sitios"
                     android:textStyle="bold"/>
 
                 <TextView
@@ -122,7 +122,7 @@
                     android:layout_width="300dp"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="10dp"
-                    android:text="@string/sitiosLugar1"/>
+                    android:text="@string/sitios"/>
             </LinearLayout>
         </LinearLayout>
     </ScrollView>

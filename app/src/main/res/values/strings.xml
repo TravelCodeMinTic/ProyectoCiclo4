@@ -1,22 +1,25 @@
 <resources>
+
+    <!-- Detalle Lugar -->
     <string name="app_name">TravelCode</string>
-    <string name="descripcionLugar">Descripción general</string>
-    <string name="ubicacionLugar">Ubicación:</string>
-    <string name="temperaturaLugar">32° C</string>
-    <string name="sitiosLugar">Sitios recomendados:</string>
-    <string name="sitiosLugar1">Parque principal de Guatapé, Piedra del Peñol, Embalse Guatapé-Peñol, Calle del Recuerdo, Plazoleta del Zócalo, Malecón de Guatapé</string>
-    <string name="ubicacionLugar2">Departamento del Valle del Cauca</string>
-    <string name="todo">todo</string>
     <string name="titulo">Titulo</string>
-    <string name="ubicacion">ubicacion</string>
-    <string name="puntuacion1">5.0</string>
+    <string name="puntuacion">5.0</string>
+    <string name="icon">Icono</string>
+    <string name="temperatura">32° C</string>
+    <string name="descripcion">Descripción general</string>
+    <string name="titulo_ubicacion">Ubicación:</string>
+    <string name="ubicacion">Departamento del Valle del Cauca</string>
+    <string name="titulo_sitios">Sitios recomendados:</string>
+    <string name="sitios">Parque principal de Guatapé, Piedra del Peñol, Embalse Guatapé-Peñol, Calle del Recuerdo, Plazoleta del Zócalo, Malecón de Guatapé</string>
+
+    <!-- Card Lugar -->
     <string name="lugar_turistico">Lugar Turistico</string>
-    <string name="todos">todos</string>
-    <string name="configuracion">Configuración App</string>
-    <string name="notificaciones">Autorizar notificaciones</string>
-    <string name="sonido">Activar sonido de notificaciones</string>
-    <string name="btnVolver">Volver</string>
-    <string name="btn1">configuración app</string>
+
+    <!-- Configuración -->
     <string name="titulo_configuracion">Configuración</string>
-    <string name="icon">Incono</string>
+    <string name="notificaciones_title">Notificaciones</string>
+    <string name="notificaciones">Activar Notificaciones</string>
+    <string name="sonido">Activar sonido de notificaciones</string>
+    <string name="attachment_summary_on">Sonido activado para las notificaciones</string>
+    <string name="attachment_summary_off">Reproducir sonido para las notificaciones</string>
 </resources>

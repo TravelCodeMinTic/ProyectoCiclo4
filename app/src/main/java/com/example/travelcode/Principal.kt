@@ -83,5 +83,4 @@ class Principal : AppCompatActivity() {
         }
         return super.onOptionsItemSelected(itemConfig)
     }
-
 }

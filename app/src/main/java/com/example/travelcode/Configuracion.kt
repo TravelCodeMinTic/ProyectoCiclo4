@@ -1,7 +1,6 @@
 package com.example.travelcode
 
 import android.os.Bundle
-
 import androidx.appcompat.app.AppCompatActivity
 import androidx.preference.PreferenceFragmentCompat
 
@@ -12,9 +11,9 @@ class Configuracion : AppCompatActivity() {
         setContentView(R.layout.configuracion)
         if (savedInstanceState == null) {
             supportFragmentManager
-                    .beginTransaction()
-                    .replace(R.id.settings, SettingsFragment())
-                    .commit()
+                .beginTransaction()
+                .replace(R.id.configuracion, SettingsFragment())
+                .commit()
         }
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
     }
