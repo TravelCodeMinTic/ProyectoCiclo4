@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import android.widget.Toast
+import androidx.preference.PreferenceManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
@@ -82,5 +84,13 @@ class Principal : AppCompatActivity() {
             startActivity(intent)
         }
         return super.onOptionsItemSelected(itemConfig)
+    }
+
+    override fun onResume() {
+        super.onResume()
+        val preferencias = PreferenceManager.getDefaultSharedPreferences(this)
+        val notificacionesActivadas : Boolean = preferencias.getBoolean("sync", false)
+        val sonidoNotificaciones : Boolean = preferencias.getBoolean("attachment", false)
+        Toast.makeText(this, "Checkeado: "+notificacionesActivadas + "y" + sonidoNotificaciones, Toast.LENGTH_SHORT).show()
     }
 }
