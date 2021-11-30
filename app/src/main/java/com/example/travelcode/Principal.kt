@@ -1,80 +1,68 @@
 package com.example.travelcode
 
-import android.app.Notification
-import android.app.NotificationChannel
-import android.app.NotificationManager
 import android.content.Intent
-import android.graphics.Color
-import android.os.Build
+
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.Toast
-import androidx.core.app.NotificationCompat
-import androidx.core.app.NotificationManagerCompat
-import androidx.preference.PreferenceManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import retrofit2.Retrofit
+import retrofit2.converter.gson.GsonConverterFactory
 
 class Principal : AppCompatActivity() {
+
+    //Lista mutable para guardar la informacion al traerla de un servidor web
+    private val lugares = mutableListOf<LugarTuristico>()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.principal)
+        obtenerData()
+    }
 
-        val recyclerView = findViewById<RecyclerView>(R.id.recyclerView)
-
+    //Inciar una lista con los lugares turisticos
+    private fun iniciarRecyclerView(){
+        val recyclerView : RecyclerView = findViewById(R.id.recyclerView)
         recyclerView.layoutManager = LinearLayoutManager(this)
-        val lugares = ArrayList<LugarTuristico>()
-
-        lugares.add(LugarTuristico(
-            "Guatapé",
-            "Uno de los pueblos más coloridos de Colombia, que se refleja en forma de zócalos y calles llenas de vida.",
-            R.drawable.imagen1,
-            4.0,
-            "19°C",
-            "Departamento de Antioquia, a 2 horas de Medellín.",
-            "Parque principal de Guatapé, Piedra del Peñol, Embalse Guatapé-Peñol, Calle del Recuerdo, Plazoleta del Zócalo, Malecón de Guatapé, entre otros."
-        ))
-        lugares.add(LugarTuristico(
-            "Santa Marta",
-            "La ciudad más antigua de América continental; en una montaña de casi 19.000 pies de altura, cuyas bases se sumergen en un mar tropical.",
-            R.drawable.imagen2,
-            3.5,
-            "32°C",
-            "Departamento del Magdalena, en la costa Caribe y a pocos kilómetros de la Sierra Nevada.",
-            "El Rodadero, Playa Blanca, Bello Horizonte, Pozos Colorados, Parque Nacional Natural Tayrona, Museo del Oro Tairona, entre otros."
-        ))
-        lugares.add(LugarTuristico(
-            "Bogotá, D.C.",
-            "Capital de la República de Colombia y el principal destino turístico del país. Epicentro de diversas actividades y eventos de nivel internacional.",
-            R.drawable.imagen3,
-            2.0,
-            "13°C",
-            "Departamento del Magdalena, en la costa Caribe y a pocos kilómetros de la Sierra Nevada.",
-            "Cerro de Monserrate, Barrio La Candelaria, Usaquen, Centro Internacional, Parque Central, Simón Bolívar, Museo del Oro,  Museo Botero, Maloka, entre otros."
-        ))
-        lugares.add(LugarTuristico(
-            "Santiago de Cali",
-            "La Sultana del Valle o Sucursal del Cielo, es una ciudad con grandes espacios de valor histórico y de recreación y diversión nocturna y diurna.",
-            R.drawable.imagen4_1,
-            5.0,
-            "28°C",
-            "Departamento de Valle del Cauca, al occidente de Colombia.",
-            "Cerro de Cristo Rey, Zoológico de Cali, Museo de arte moderno La Tertulia, Iglesia la Ermita, Boulevard del Río Cali, entre otros."
-        ))
-        lugares.add(LugarTuristico(
-            "Cartagena de Indias",
-            "La perla colonial de Colombia o La heroica, es una ciudad soñada, una de las más bellas y mejor conservadas de América.",
-            R.drawable.imagen5_1,
-            4.5,
-            "32°C",
-            "Departamento de Bolívar, al norte de Colombia y a orillas del Mar Caribe.",
-            "Castillo San Felipe de Barajas, Murallas de Cartagena, Torre del Reloj, Convento de La Popa, Plaza de la Aduana, entre otros."
-        ))
-
         val adapter = CustomAdapter(lugares)
         recyclerView.adapter = adapter
+    }
+
+    //Funcion para obtener hacer la consulta a un servicio web
+    private fun getRetrofit(): Retrofit {
+        return Retrofit.Builder()
+            .addConverterFactory(GsonConverterFactory.create())//Convierte a json
+            .baseUrl("https://api-travelcode.herokuapp.com/api/v1/Sites/") //Paso la url
+            .build()
+    }
+
+    //Funcion para obtener la data de un servicio web
+    private fun obtenerData(){
+        CoroutineScope(Dispatchers.IO).launch {
+            val call = getRetrofit().create(ApiInterface::class.java).getData()
+            val respuesta = call.body()
+
+            //runOnUiThread para volver al hilo principal
+            runOnUiThread {
+                if(call.isSuccessful){
+                    lugares.clear() //Se limpia la lista
+                    //Añade la respuesta(lista o json) del servidor a la lista
+                    lugares.addAll(respuesta ?: emptyList())
+                    iniciarRecyclerView()
+                } else{ notificacionError() } //Si pasa algun error al traer la data
+            }
+        }
+    }
+
+    //Funcion por si genera algun error al traer la data del servidor
+    private fun notificacionError(){
+        Toast.makeText(this, "Servidor Fallido", Toast.LENGTH_SHORT).show()
     }
 
     //Metodo para mostrar y ocultar el menu
@@ -93,7 +81,7 @@ class Principal : AppCompatActivity() {
         return super.onOptionsItemSelected(itemConfig)
     }
 
-    override fun onResume() {
+    /*override fun onResume() {
         super.onResume()
         val preferencias = PreferenceManager.getDefaultSharedPreferences(this)
         val notificacionesActivadas : Boolean = preferencias.getBoolean("sync", false)
@@ -107,10 +95,9 @@ class Principal : AppCompatActivity() {
             crearNotificacionChannel()
             crearNotificacionConSonido()
         }
-
     }
 
-    private fun crearNotificacionChannel() {
+    fun crearNotificacionChannel() {
         if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             val channel = NotificationChannel(
                 "NOTIFICACION",
@@ -148,6 +135,5 @@ class Principal : AppCompatActivity() {
 
         val compat = NotificationManagerCompat.from(this)
         compat.notify(0, builder.build())
-    }
-
+    }*/
 }

@@ -9,9 +9,9 @@ import android.widget.ImageView
 import android.widget.RatingBar
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.bumptech.glide.Glide
+import com.squareup.picasso.Picasso
 
-class CustomAdapter(private var lista: ArrayList<LugarTuristico>): RecyclerView.Adapter<CustomAdapter.ViewHolder>() {
+class CustomAdapter(private var lista: List<LugarTuristico>): RecyclerView.Adapter<CustomAdapter.ViewHolder>() {
 
     //Cuando entra a crear la RecyclerView
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -37,10 +37,10 @@ class CustomAdapter(private var lista: ArrayList<LugarTuristico>): RecyclerView.
             val puntuacion: RatingBar = itemView.findViewById(R.id.puntuacion)
 
             //Pasamos los valores a cada componente de la interfaz
-            tituloLugar.text = data.titulo
-            descripcionLugar.text = data.descripcion
-            Glide.with(itemView.context).load(data.imagen).into(imgLugar)
-            puntuacion.rating = data.puntuacion.toFloat()
+            tituloLugar.text = data.title
+            descripcionLugar.text = data.descriptionShort
+            Picasso.get().load(data.image).into(imgLugar)
+            puntuacion.rating = data.score.toFloat()
 
             //Evento cuando se le da en una tarjeta
             itemView.setOnClickListener{

@@ -3,11 +3,13 @@ package com.example.travelcode
 import java.io.Serializable
 
 class LugarTuristico(
-    var titulo: String,
-    var descripcion: String,
-    var imagen: Int,
-    var puntuacion: Double,
-    var temperatura: String,
-    var ubicacion: String,
-    var sitios: String
-    ):Serializable
+    val _id:String,
+    val title: String,
+    val descriptionShort: String,
+    val descriptionLarge: String,
+    val location: String,
+    val temperature: String,
+    val recommendedSites: String,
+    val image: String,
+    val score: Double,
+):Serializable

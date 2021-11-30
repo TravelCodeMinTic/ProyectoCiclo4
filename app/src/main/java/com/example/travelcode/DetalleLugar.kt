@@ -5,7 +5,7 @@ import android.os.Bundle
 import android.widget.ImageView
 import android.widget.RatingBar
 import android.widget.TextView
-import com.bumptech.glide.Glide
+import com.squareup.picasso.Picasso
 
 class DetalleLugar : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -29,13 +29,13 @@ class DetalleLugar : AppCompatActivity() {
         val lugar: LugarTuristico = bundle?.getSerializable("info") as LugarTuristico
 
         //Asignamos valores a los componentes de la interfaz
-        Glide.with(this).load(lugar.imagen).into(imagenTuristica)
-        tituloLugar.text = lugar.titulo
-        descripcionLugar.text = lugar.descripcion
-        puntuacionLugar.rating = lugar.puntuacion.toFloat()
-        puntacionNum.text = lugar.puntuacion.toString()
-        temperaturaLugar.text = lugar.temperatura
-        ubicacionLugar.text = lugar.ubicacion
-        sitiosLugar.text = lugar.sitios
+        Picasso.get().load(lugar.image).into(imagenTuristica)
+        tituloLugar.text = lugar.title
+        descripcionLugar.text = lugar.descriptionLarge
+        puntuacionLugar.rating = lugar.score.toFloat()
+        puntacionNum.text = lugar.score.toString()
+        temperaturaLugar.text = lugar.temperature
+        ubicacionLugar.text = lugar.location
+        sitiosLugar.text = lugar.recommendedSites
     }
 }
