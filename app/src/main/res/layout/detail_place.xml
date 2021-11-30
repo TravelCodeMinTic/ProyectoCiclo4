@@ -1,6 +1,8 @@
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".DetailPlace"
@@ -123,19 +125,18 @@
                     android:layout_marginBottom="10dp"
                     android:text="@string/recommendedSites"/>
             </LinearLayout>
-
-            <com.google.android.material.floatingactionbutton.FloatingActionButton
-                android:id="@+id/floatingActionButton6"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="bottom|end"
-                android:layout_margin="20dp"
-                android:contentDescription="@string/icon"
-                android:backgroundTint="@color/teal_700"
-                android:baselineAlignBottom="true"
-                android:focusable="true"
-                app:srcCompat="@drawable/ic_baseline_location_on_24" />
-
         </LinearLayout>
     </ScrollView>
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btnMap"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="15dp"
+        android:contentDescription="@string/icon"
+        android:backgroundTint="@color/teal_700"
+        app:srcCompat="@drawable/icon_map"/>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
