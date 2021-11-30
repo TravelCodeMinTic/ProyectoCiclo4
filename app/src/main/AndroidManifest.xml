@@ -12,28 +12,24 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.TravelCode">
-
         <activity
-            android:name=".Configuracion"
+            android:name=".Configuration"
             android:exported="false"
-            android:label="@string/titulo_configuracion">
+            android:label="@string/title_configuration">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".Principal" />
         </activity>
         <activity
-            android:name=".DetalleLugar"
+            android:name=".DetailPlace"
             android:exported="false"
             android:theme="@style/Theme.MaterialComponents.Light.NoActionBar" />
-            android:usesCleartextTraffic="true"
         <activity
             android:name=".Principal"
             android:exported="true">
             <intent-filter>
-
                 <!-- Para que se inicie la app por esta actividad -->
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

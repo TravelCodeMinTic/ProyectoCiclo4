@@ -1,25 +1,24 @@
 <resources>
-
-    <!-- Detalle Lugar -->
+    <!-- Place Detail -->
     <string name="app_name">TravelCode</string>
-    <string name="titulo">Titulo</string>
-    <string name="puntuacion">5.0</string>
-    <string name="icon">Icono</string>
-    <string name="temperatura">32° C</string>
-    <string name="descripcion">Descripción general</string>
-    <string name="titulo_ubicacion">Ubicación:</string>
-    <string name="ubicacion">Departamento del Valle del Cauca</string>
-    <string name="titulo_sitios">Sitios recomendados:</string>
-    <string name="sitios">Parque principal de Guatapé, Piedra del Peñol, Embalse Guatapé-Peñol, Calle del Recuerdo, Plazoleta del Zócalo, Malecón de Guatapé</string>
+    <string name="title">Title</string>
+    <string name="score">5.0</string>
+    <string name="icon">Icon</string>
+    <string name="temperature">32°C</string>
+    <string name="description">General description</string>
+    <string name="title_location">Location:</string>
+    <string name="location">Location detail</string>
+    <string name="title_recommendedSites">Recommended sites:</string>
+    <string name="recommendedSites">Detail of recommended sites</string>
 
     <!-- Card Lugar -->
-    <string name="lugar_turistico">Lugar Turistico</string>
+    <string name="tourist_spot">Tourist spot</string>
 
-    <!-- Configuración -->
-    <string name="titulo_configuracion">Configuración</string>
-    <string name="notificaciones_title">Notificaciones</string>
-    <string name="notificaciones">Activar Notificaciones</string>
-    <string name="sonido">Activar sonido de notificaciones</string>
-    <string name="attachment_summary_on">Sonido activado para las notificaciones</string>
-    <string name="attachment_summary_off">Reproducir sonido para las notificaciones</string>
+    <!-- Configuration -->
+    <string name="title_configuration">Configuration</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="notifications">Enable notifications</string>
+    <string name="sound">Activate notification sound</string>
+    <string name="attachment_on">Sound activated for notifications</string>
+    <string name="attachment_off">Play sound for notifications</string>
 </resources>

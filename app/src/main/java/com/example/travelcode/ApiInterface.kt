@@ -5,5 +5,5 @@ import retrofit2.http.GET
 
 interface ApiInterface {
     @GET(".")
-    suspend fun getData(): Response<List<LugarTuristico>>
+    suspend fun getData(): Response<List<TouristSpot>>
 }

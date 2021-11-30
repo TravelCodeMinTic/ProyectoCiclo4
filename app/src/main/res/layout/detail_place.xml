@@ -3,7 +3,7 @@
     android:layout_height="match_parent"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".DetalleLugar"
+    tools:context=".DetailPlace"
     android:background="#EEF1F3">
 
     <ScrollView
@@ -16,12 +16,12 @@
             android:orientation="vertical">
 
             <ImageView
-                android:id="@+id/imagenTuristica"
+                android:id="@+id/imagePlace"
                 android:layout_width="match_parent"
                 android:layout_height="350dp"
                 android:contentDescription="@string/icon"
                 android:scaleType="centerCrop"
-                android:src="@drawable/imagen1"/>
+                android:src="@drawable/image"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -30,11 +30,11 @@
                 android:padding="20dp">
 
                 <TextView
-                    android:id="@+id/tituloLugar"
+                    android:id="@+id/titlePlace"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="sans-serif-medium"
-                    android:text="@string/titulo"
+                    android:text="@string/title"
                     android:textColor="@color/black"
                     android:textSize="30sp"
                     android:textStyle="bold" />
@@ -45,24 +45,24 @@
                     android:orientation="horizontal">
 
                     <TextView
-                        android:id="@+id/puntuacionNum"
+                        android:id="@+id/numScorePlace"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:fontFamily="sans-serif-medium"
-                        android:text="@string/puntuacion"
+                        android:text="@string/score"
                         android:textColor="@color/black"
                         android:textSize="12sp"
                         android:textStyle="bold" />
 
                     <RatingBar
-                        android:id="@+id/puntuacionLugar"
+                        android:id="@+id/scorePlace"
                         style="@style/Widget.AppCompat.RatingBar.Small"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:layout_marginStart="8dp"
-                        android:layout_toEndOf="@+id/puntuacionNum"
+                        android:layout_toEndOf="@+id/numScorePlace"
                         android:isIndicator="true"
                         android:progressTint="#FFC107"
                         android:rating="5"
@@ -72,28 +72,27 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_centerVertical="true"
-                        android:layout_toStartOf="@id/temperaturaLugar"
+                        android:layout_toStartOf="@id/temperaturePlace"
                         android:contentDescription="@string/icon"
-
-                        android:src="@drawable/icono_temperatura" />
+                        android:src="@drawable/icon_temperature" />
 
                     <TextView
-                        android:id="@+id/temperaturaLugar"
+                        android:id="@+id/temperaturePlace"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentEnd="true"
-                        android:text="@string/temperatura"
+                        android:text="@string/temperature"
                         android:textColor="@color/black"
                         android:textSize="20sp"
                         android:textStyle="bold" />
                 </RelativeLayout>
 
                 <TextView
-                    android:id="@+id/descripcionLugar"
+                    android:id="@+id/descriptionPlace"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="15dp"
-                    android:text="@string/descripcion"
+                    android:text="@string/description"
                     android:fontFamily="sans-serif-medium"
                     android:textSize="14sp" />
 
@@ -101,42 +100,41 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
-                    android:text="@string/titulo_ubicacion"
+                    android:text="@string/title_location"
                     android:textStyle="bold" />
 
                 <TextView
-                    android:id="@+id/ubicacionLugar"
+                    android:id="@+id/locationPlace"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/ubicacion" />
+                    android:text="@string/location" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
-                    android:text="@string/titulo_sitios"
+                    android:text="@string/title_recommendedSites"
                     android:textStyle="bold"/>
 
                 <TextView
-                    android:id="@+id/sitiosLugar"
+                    android:id="@+id/sitesPlace"
                     android:layout_width="300dp"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="10dp"
-                    android:text="@string/sitios"/>
-
-                <com.google.android.material.floatingactionbutton.FloatingActionButton
-                    android:id="@+id/floatingActionButton6"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="bottom|end"
-                    android:layout_marginRight="4dp"
-                    android:backgroundTint="@color/teal_700"
-                    android:baselineAlignBottom="true"
-                    android:clickable="true"
-                    android:textAlignment="center"
-                    app:srcCompat="@drawable/ic_baseline_location_on_24" />
-
+                    android:text="@string/recommendedSites"/>
             </LinearLayout>
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/floatingActionButton6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|end"
+                android:layout_margin="20dp"
+                android:contentDescription="@string/icon"
+                android:backgroundTint="@color/teal_700"
+                android:baselineAlignBottom="true"
+                android:focusable="true"
+                app:srcCompat="@drawable/ic_baseline_location_on_24" />
 
         </LinearLayout>
     </ScrollView>

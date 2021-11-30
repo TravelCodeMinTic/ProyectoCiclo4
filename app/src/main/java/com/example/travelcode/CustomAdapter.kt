@@ -11,40 +11,40 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.squareup.picasso.Picasso
 
-class CustomAdapter(private var lista: List<LugarTuristico>): RecyclerView.Adapter<CustomAdapter.ViewHolder>() {
+class CustomAdapter(private var listPlaces: List<TouristSpot>): RecyclerView.Adapter<CustomAdapter.ViewHolder>() {
 
     //Cuando entra a crear la RecyclerView
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val v = LayoutInflater.from(parent.context).inflate(R.layout.card_lugar, parent, false)
+        val v = LayoutInflater.from(parent.context).inflate(R.layout.card_place, parent, false)
         return ViewHolder(v)
     }
 
     //Pobla cada elemento por separada de RecyclerView
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.bindItems(lista[position])
+        holder.bindItems(listPlaces[position])
     }
 
     override fun getItemCount(): Int {
-        return lista.size
+        return listPlaces.size
     }
 
     class ViewHolder(itemView:View): RecyclerView.ViewHolder(itemView){
-        fun  bindItems(data:LugarTuristico){
+        fun  bindItems(data:TouristSpot){
             //Inicializamos los componentes
-            val tituloLugar: TextView = itemView.findViewById(R.id.tituloLugar)
-            val descripcionLugar: TextView = itemView.findViewById(R.id.descripcionLugar)
-            val imgLugar: ImageView = itemView.findViewById(R.id.imgLugar)
-            val puntuacion: RatingBar = itemView.findViewById(R.id.puntuacion)
+            val cardTitle: TextView = itemView.findViewById(R.id.cardTitle)
+            val cardDescription: TextView = itemView.findViewById(R.id.cardDescription)
+            val cardImage: ImageView = itemView.findViewById(R.id.cardImage)
+            val cardScore: RatingBar = itemView.findViewById(R.id.cardScore)
 
             //Pasamos los valores a cada componente de la interfaz
-            tituloLugar.text = data.title
-            descripcionLugar.text = data.descriptionShort
-            Picasso.get().load(data.image).into(imgLugar)
-            puntuacion.rating = data.score.toFloat()
+            cardTitle.text = data.title
+            cardDescription.text = data.descriptionShort
+            Picasso.get().load(data.image).into(cardImage)
+            cardScore.rating = data.score.toFloat()
 
             //Evento cuando se le da en una tarjeta
             itemView.setOnClickListener{
-                val intent = Intent(itemView.context, DetalleLugar::class.java)
+                val intent = Intent(itemView.context, DetailPlace::class.java)
                 val bundle = Bundle()
 
                 bundle.putSerializable("info", data)

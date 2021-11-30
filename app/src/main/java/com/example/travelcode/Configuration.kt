@@ -4,14 +4,14 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.preference.PreferenceFragmentCompat
 
-class Configuracion : AppCompatActivity() {
+class Configuration : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.configuracion)
+        setContentView(R.layout.configuration)
         if (savedInstanceState == null) {
             supportFragmentManager
                 .beginTransaction()
-                .replace(R.id.configuracion, SettingsFragment())
+                .replace(R.id.configuration, SettingsFragment())
                 .commit()
         }
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
