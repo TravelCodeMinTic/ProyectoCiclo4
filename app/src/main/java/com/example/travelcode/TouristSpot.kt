@@ -12,4 +12,6 @@ class TouristSpot(
     val recommendedSites: String,
     val image: String,
     val score: Double,
+    val lat: String,
+    val long: String
 ):Serializable
