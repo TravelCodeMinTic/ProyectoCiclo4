@@ -52,14 +52,14 @@ class DetailPlace : AppCompatActivity() {
 
         btnMap.setOnClickListener { view ->
             if (isGoogleMapsInstalled()) {
-                val gmmIntentUri = Uri.parse("geo:37.7749,-122.4194")
-                //val gmmIntentUri = Uri.parse("geo:${lugar.lat},${lugar.long}")
+                //val gmmIntentUri = Uri.parse("geo:37.7749,-122.4194")
+                val gmmIntentUri = Uri.parse("geo:${lugar.latitud},${lugar.longitud}")
                 val mapIntent = Intent(Intent.ACTION_VIEW, gmmIntentUri)
                 mapIntent.setPackage("com.google.android.apps.maps")
                 startActivity(mapIntent)
             } else {
-                val browserIntent = Intent(ACTION_VIEW, Uri.parse("https://maps.google.com?q=51.03841,-114.01679"))
-                //val browserIntent = Intent(ACTION_VIEW, Uri.parse("https://maps.google.com?q=${lugar.lat},${lugar.long}"))
+                //val browserIntent = Intent(ACTION_VIEW, Uri.parse("https://maps.google.com?q=51.03841,-114.01679"))
+                val browserIntent = Intent(ACTION_VIEW, Uri.parse("https://maps.google.com?q=${lugar.latitud},${lugar.longitud}"))
                 startActivity(browserIntent)
             }
         }
