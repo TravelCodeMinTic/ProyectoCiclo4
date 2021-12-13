@@ -1,14 +1,15 @@
-<PreferenceScreen
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
     <PreferenceCategory app:title="@string/title_notifications">
         <SwitchPreferenceCompat
+
             app:key="sync"
             app:title="@string/notifications" />
 
         <SwitchPreferenceCompat
-            app:dependency="sync"
             app:key="attachment"
+            app:dependency="sync"
             app:summaryOff="@string/attachment_off"
             app:summaryOn="@string/attachment_on"
             app:title="@string/sound" />

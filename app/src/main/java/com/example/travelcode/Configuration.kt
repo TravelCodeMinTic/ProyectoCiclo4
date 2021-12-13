@@ -2,7 +2,9 @@ package com.example.travelcode
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.preference.Preference
 import androidx.preference.PreferenceFragmentCompat
+import androidx.preference.SwitchPreferenceCompat
 
 class Configuration : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
