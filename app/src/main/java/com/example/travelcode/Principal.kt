@@ -63,13 +63,13 @@ class Principal : AppCompatActivity() {
                     //Añade la respuesta(lista o json) del servidor a la lista
                     places.addAll(response ?: emptyList())
                     initRecyclerView()
-                } else{ notificationError() } //Si pasa algun error al traer la data
+                } else{ serverError() } //Si pasa algun error al traer la data
             }
         }
     }
 
     //Funcion por si genera algun error al traer la data del servidor
-    private fun notificationError(){
+    private fun serverError(){
         Toast.makeText(this,"Server error",Toast.LENGTH_SHORT).show()
     }
 
@@ -105,7 +105,7 @@ class Principal : AppCompatActivity() {
         }
     }
 
-    fun crearNotificacionChannel() {
+    private fun crearNotificacionChannel() {
         if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             val channel = NotificationChannel(
                 "NOTIFICACION",
@@ -125,7 +125,6 @@ class Principal : AppCompatActivity() {
         builder.color = Color.BLUE
         builder.setTicker("Notificación Nueva")
         builder.priority = NotificationCompat.PRIORITY_HIGH
-
         val compat = NotificationManagerCompat.from(this)
         compat.notify(0, builder.build())
     }
@@ -138,12 +137,8 @@ class Principal : AppCompatActivity() {
         builder.color = Color.BLUE
         builder.setTicker("Notificación Nueva")
         builder.priority = NotificationCompat.PRIORITY_HIGH
-
-        builder.setDefaults(Notification.DEFAULT_SOUND)
-
+        builder.setDefaults(Notification.DEFAULT_SOUND) //Sonido
         val compat = NotificationManagerCompat.from(this)
         compat.notify(0, builder.build())
     }
-
-
 }
